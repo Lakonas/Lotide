@@ -1,4 +1,4 @@
-const eqArrays = function (arr1, arr2) {
+const assertArraysEqual = function (arr1, arr2) {
   const failed = "Arrays don't match";
   const passed = "Arrays match";
   
