@@ -15,7 +15,7 @@ const assertEqual = function (actual,expected){
     const char = string[i]
 
         
-        if (/[a-z]/.test(char)) {
+        if (/[a-zA-Z]/.test(char)) {
             // If the letter already exists in the object, increment its count
             if (list[char]) { //used AI to see how we can increment a letter already encountered
                 list[char]++;
@@ -24,7 +24,7 @@ const assertEqual = function (actual,expected){
                 list[char] = 1;
             }
         }
-    }
+    }return list;
 
    const keys = Object.keys(list);
 
@@ -34,3 +34,9 @@ const assertEqual = function (actual,expected){
     console.log(letter + ": " + list[letter]);  
   }
 }
+
+const result = countLetters('hello');
+assertEqual(result['h'], 1);
+assertEqual(result['e'], 1);
+assertEqual(result['l'], 2);
+assertEqual(result['o'], 1);
