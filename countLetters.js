@@ -12,7 +12,7 @@ const assertEqual = function (actual,expected){
 
     
    for (let i = 0; i < string.length; i++) {
-    const char = string[i].toLowerCase()
+    const char = string[i]
 
         
         if (/[a-z]/.test(char)) {
