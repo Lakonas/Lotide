@@ -6,7 +6,7 @@ const assertEqual = function (actual,expected){
   }else console.log(passed);
   
   };
-  function countLetters(string) {
+  const countLetters = function (string) {
     
     let list = {};
 
