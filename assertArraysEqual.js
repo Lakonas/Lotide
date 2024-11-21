@@ -1,3 +1,8 @@
+
+const connect = require("./eqArrays");
+
+
+
 const assertArraysEqual = function (arr1, arr2) {
   const failed = "Arrays don't match";
   const passed = "Arrays match";
@@ -20,3 +25,5 @@ const assertArraysEqual = function (arr1, arr2) {
   console.log(passed);
   return true;
 };
+
+module.exports = assertArraysEqual;
