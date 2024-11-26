@@ -1,7 +1,25 @@
-const assertEqual = require("../assertEqual");
-
-assertEqual("Lighthouse Labs", "Bootcamp");
-assertEqual(1, 1);
+const assertArraysEqual = function (arr1, arr2) {
+  const failed = "Arrays don't match";
+  const passed = "Arrays match";
+  
+  
+  if (arr1.length !== arr2.length) {
+    console.log(failed);
+    return false; 
+  }
+  
+  
+  for (let i = 0; i < arr1.length; i++) {
+    if (arr1[i] !== arr2[i]) {
+      console.log(failed);  
+      return false;
+    }
+  }
+  
+ 
+  console.log(passed);
+  return true;
+};
 
   const eqArrays = function(arr1, arr2) {
   
@@ -31,3 +49,5 @@ assertEqual(1, 1);
     return result; 
   };
   
+  const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
+  assertArraysEqual(takeUntil(data1, x => x < 0), [1, 2, 5, 7, 2]); // => should PASS
