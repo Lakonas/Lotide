@@ -20,4 +20,15 @@ const assertEqual = function (actual,expected){
     return undefined;
   };
 
-  assertEqual(findKey(object, calback));
+  const testObject = {
+    "Blue Hill": { stars: 1 },
+    "Akaleri":   { stars: 3 },
+    "noma":      { stars: 2 }, // <== should return "noma"
+    "elBulli":   { stars: 3 },
+    "Ora":       { stars: 2 },
+    "Akelarre":  { stars: 3 }
+  };
+  
+  const testCallback = x => x.stars === 2;
+  
+  assertEqual(findKey(testObject, testCallback), "noma");
