@@ -54,4 +54,4 @@ const assertEqual = function (actual,expected){
   
   const longSleeveShirtObject = { size: "medium", color: "red", sleeveLength: "long" };
   eqObjects(shirtObject, longSleeveShirtObject); // => false
-  assertEqual(shirtObject, anotherShirtObject );
+  assertEqual(eqObjects(shirtObject, anotherShirtObject), true);
